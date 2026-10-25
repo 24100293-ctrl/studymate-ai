@@ -3,13 +3,14 @@
 > **Đồ án môn học**: Lập trình Web Nâng Cao  
 > **Kiến trúc**: Client-Server (Frontend React + Backend Node.js Express)  
 > **Cơ sở dữ liệu**: SQLite  
-> **Trí tuệ nhân tạo**: Google Gemini API  
+> **Trí tuệ nhân tạo**: Google Gemini API
 
 ---
 
 ## 1. Giới Thiệu Dự Án
 
 **StudyMate AI** là một ứng dụng web hỗ trợ sinh viên học tập thông minh. Ứng dụng cung cấp các tính năng trọng tâm:
+
 - **Hỏi đáp kiến thức**: Giải đáp các khái niệm, bài tập thông qua Gemini AI.
 - **Tóm tắt bài học**: Chắt lọc kiến thức cốt lõi từ các tài liệu hoặc bài giảng dài.
 - **Tạo câu hỏi trắc nghiệm ôn tập**: Sinh ngẫu nhiên các câu hỏi trắc nghiệm kèm giải thích chi tiết theo từng chủ đề môn học.
@@ -19,12 +20,12 @@
 
 ## 2. Phân Công Trách Nhiệm Trong Nhóm
 
-| Thành viên | Phụ trách | Phạm vi công việc |
-| :--- | :--- | :--- |
-| Phạm Duy Khánh | Giao diện và trải nghiệm người dùng | Phát triển Frontend React, xây dựng giao diện và tối ưu trải nghiệm người dùng. |
-| Nguyễn Trung Đức | Các chức năng AI | Phát triển Backend và tích hợp Gemini API cho các chức năng hỏi đáp, tóm tắt tài liệu và tạo câu hỏi trắc nghiệm. |
-| Đỗ Đăng Dương | Lịch sử học tập và kiểm thử | Xử lý lịch sử học tập, làm việc với Database và thực hiện kiểm thử hệ thống. |
-| Mai Tiến Đạt (Trưởng nhóm kỹ thuật) | Auth, Tích hợp, Test, Deploy, Docs | Xác thực JWT, cấu hình SQLite, xây dựng middleware, kết nối Gemini backend, kiểm thử bằng Jest/Supertest và xây dựng tài liệu nhóm. |
+| Thành viên                          | Phụ trách                           | Phạm vi công việc                                                                                                                   |
+| :---------------------------------- | :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Phạm Duy Khánh                      | Giao diện và trải nghiệm người dùng | Phát triển Frontend React, xây dựng giao diện và tối ưu trải nghiệm người dùng.                                                     |
+| Nguyễn Trung Đức                    | Các chức năng AI                    | Phát triển Backend và tích hợp Gemini API cho các chức năng hỏi đáp, tóm tắt tài liệu và tạo câu hỏi trắc nghiệm.                   |
+| Đỗ Đăng Dương                       | Lịch sử học tập và kiểm thử         | Xử lý lịch sử học tập, làm việc với Database và thực hiện kiểm thử hệ thống.                                                        |
+| Mai Tiến Đạt (Trưởng nhóm kỹ thuật) | Auth, Tích hợp, Test, Deploy, Docs  | Xác thực JWT, cấu hình SQLite, xây dựng middleware, kết nối Gemini backend, kiểm thử bằng Jest/Supertest và xây dựng tài liệu nhóm. |
 
 ---
 
@@ -40,11 +41,13 @@
 ## 4. Yêu Cầu Môi Trường Cài Đặt
 
 Trước khi chạy dự án, hãy đảm bảo máy tính đã cài đặt:
+
 1. **Node.js**: Phiên bản `>= 18.0.0` (Khuyến nghị phiên bản LTS `v20.x` hoặc `v24.x`).
 2. **npm**: Phiên bản `>= 9.x` (đi kèm sẵn với Node.js).
 3. **Git**: Phiên bản mới nhất để quản lý phiên bản.
 
 Kiểm tra bằng terminal:
+
 ```bash
 node -v
 npm -v
@@ -56,12 +59,14 @@ git --version
 ## 5. Hướng Dẫn Thiết Lập & Khởi Chạy Dự Án (Sau Khi Hoàn Tất Cài Đặt)
 
 ### Bước 1: Clone mã nguồn về máy
+
 ```bash
 git clone <URL_REPOSITORY_GITHUB>
 cd studymate-ai
 ```
 
 ### Bước 2: Thiết lập Backend
+
 ```bash
 cd backend
 # 1. Cài đặt các thư viện cần thiết (khi đến Giai đoạn 2)
@@ -82,7 +87,9 @@ npm run dev
 ```
 
 ### Bước 3: Thiết lập Frontend
+
 Mở một cửa sổ terminal mới:
+
 ```bash
 cd frontend
 # 1. Cài đặt thư viện frontend
@@ -94,7 +101,9 @@ npm run dev
 ```
 
 ### Bước 4: Chạy kiểm thử tự động (Testing)
+
 Tại thư mục `backend/`:
+
 ```bash
 npm test
 ```
@@ -103,6 +112,6 @@ npm test
 
 ## 6. Tài Liệu Tham Khảo Dành Cho Thành Viên Nhóm
 
-- [Đặc tả toàn bộ API Contract (Request / Response / Error Codes)](file:///docs/api-specs.md)
-- [Quy chuẩn làm việc nhóm với Git & Pull Request](file:///docs/git-workflow.md)
-- [Cơ sở dữ liệu SQLite Schema](file:///docs/database-schema.sql)
+- [Đặc tả API Contract](docs/api-specs.md)
+- [Quy chuẩn làm việc nhóm với Git & Pull Request](docs/git-workflow.md)
+- [Cơ sở dữ liệu SQLite Schema](docs/database-schema.sql)
