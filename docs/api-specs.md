@@ -187,10 +187,12 @@ Nếu thiếu header hoặc token không hợp lệ / hết hạn, server sẽ t
 - **Request Body**:
 ```json
 {
-  "topic": "Lập trình mạng và giao thức HTTP/HTTPS",
-  "numQuestions": 3 // số lượng câu hỏi mong muốn (mặc định 3, tối đa 10)
+  "topic": "Lập trình mạng và giao thức HTTP/HTTPS", // hoặc dùng trường "content"
+  "numQuestions": 3 // số lượng câu hỏi mong muốn (mặc định 3, tối đa 10; hoặc dùng trường "numberOfQuestions")
 }
 ```
+> **Ghi chú tính tương thích**: Backend hỗ trợ linh hoạt cả `topic` lẫn `content`, và cả `numQuestions` lẫn `numberOfQuestions` để đảm bảo tương thích hoàn hảo giữa Frontend và Backend.
+
 - **Response thành công (`200 OK`)**:
 ```json
 {
