@@ -1,67 +1,117 @@
-﻿# StudyMate AI – Nền tảng trợ lý học tập thông minh
+# StudyMate AI - Nền Tảng Trợ Lý Học Tập Thông Minh
 
-## 1. Giới thiệu dự án
+> **Đồ án môn học**: Lập trình Web Nâng Cao  
+> **Kiến trúc**: Client-Server (Frontend React + Backend Node.js Express)  
+> **Cơ sở dữ liệu**: SQLite  
+> **Trí tuệ nhân tạo**: Google Gemini API
 
-StudyMate AI là ứng dụng web hỗ trợ sinh viên học tập thông minh. Ứng dụng hướng đến việc giúp người học tiếp cận kiến thức, ôn tập bài học và luyện tập thông qua các tính năng sử dụng trí tuệ nhân tạo.
+---
 
-Đây là đồ án môn học **Lập trình Web Nâng Cao**.
+## 1. Giới Thiệu Dự Án
 
-## 2. Công nghệ sử dụng
+**StudyMate AI** là một ứng dụng web hỗ trợ sinh viên học tập thông minh. Ứng dụng cung cấp các tính năng trọng tâm:
 
-- **Frontend:** React
-- **Backend:** Node.js và Express
-- **Cơ sở dữ liệu:** SQLite
-- **Trí tuệ nhân tạo:** Google Gemini API
-- **Kiến trúc:** Client–Server
+- **Hỏi đáp kiến thức**: Giải đáp các khái niệm, bài tập thông qua Gemini AI.
+- **Tóm tắt bài học**: Chắt lọc kiến thức cốt lõi từ các tài liệu hoặc bài giảng dài.
+- **Tạo câu hỏi trắc nghiệm ôn tập**: Sinh ngẫu nhiên các câu hỏi trắc nghiệm kèm giải thích chi tiết theo từng chủ đề môn học.
+- **Lưu trữ lịch sử học tập**: Tự động lưu lại các phiên hỏi đáp, tóm tắt và quiz vào cơ sở dữ liệu cá nhân của từng sinh viên.
 
-## 3. Chức năng chính
+---
 
-### 3.1. Hỏi đáp kiến thức
-Hỗ trợ người học tìm hiểu khái niệm, giải đáp câu hỏi và tham khảo lời giải bài tập thông qua Gemini AI.
+## 2. Phân Công Trách Nhiệm Trong Nhóm
 
-### 3.2. Tóm tắt bài học
-Hỗ trợ tóm tắt nội dung học tập để người dùng dễ dàng nắm bắt những kiến thức trọng tâm.
+| Thành viên                          | Phụ trách                           | Phạm vi công việc                                                                                                                   |
+| :---------------------------------- | :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Phạm Duy Khánh                      | Giao diện và trải nghiệm người dùng | Phát triển Frontend React, xây dựng giao diện và tối ưu trải nghiệm người dùng.                                                     |
+| Nguyễn Trung Đức                    | Các chức năng AI                    | Phát triển Backend và tích hợp Gemini API cho các chức năng hỏi đáp, tóm tắt tài liệu và tạo câu hỏi trắc nghiệm.                   |
+| Đỗ Đăng Dương                       | Lịch sử học tập và kiểm thử         | Xử lý lịch sử học tập, làm việc với Database và thực hiện kiểm thử hệ thống.                                                        |
+| Mai Tiến Đạt (Trưởng nhóm kỹ thuật) | Auth, Tích hợp, Test, Deploy, Docs  | Xác thực JWT, cấu hình SQLite, xây dựng middleware, kết nối Gemini backend, kiểm thử bằng Jest/Supertest và xây dựng tài liệu nhóm. |
 
-### 3.3. Tạo câu hỏi trắc nghiệm
-Hỗ trợ tạo câu hỏi trắc nghiệm để người học tự kiểm tra và ôn tập kiến thức.
+---
 
-## 4. Kiến trúc hệ thống
+## 3. Công Nghệ Sử Dụng
 
-Ứng dụng được tổ chức theo mô hình Client–Server:
+- **Frontend**: React (JavaScript), Vite, Axios, React Router DOM, Lucide Icons.
+- **Backend**: Node.js, Express (ES Modules), SQLite (`better-sqlite3`), BcryptJS, JSON Web Token (JWT).
+- **AI Service**: Google Gemini API (gọi độc quyền và bảo mật tại Backend qua `@google/genai`).
+- **Kiểm thử tự động**: Jest, Supertest.
 
-- **Client:** Giao diện React, tiếp nhận thao tác từ người dùng và hiển thị kết quả.
-- **Server:** Node.js và Express xử lý các yêu cầu từ client.
-- **Database:** SQLite lưu trữ dữ liệu của ứng dụng.
-- **AI Service:** Gemini API hỗ trợ các chức năng học tập sử dụng trí tuệ nhân tạo.
+---
 
-## 5. Yêu cầu trước khi chạy
+## 4. Yêu Cầu Môi Trường Cài Đặt
 
-Cần chuẩn bị:
+Trước khi chạy dự án, hãy đảm bảo máy tính đã cài đặt:
 
-- Node.js và npm.
-- API key của Google Gemini nếu sử dụng các chức năng AI.
-- Các gói phụ thuộc được khai báo trong dự án.
+1. **Node.js**: Phiên bản `>= 18.0.0` (Khuyến nghị phiên bản LTS `v20.x` hoặc `v24.x`).
+2. **npm**: Phiên bản `>= 9.x` (đi kèm sẵn với Node.js).
+3. **Git**: Phiên bản mới nhất để quản lý phiên bản.
 
-## 6. Cài đặt và chạy dự án
+Kiểm tra bằng terminal:
 
-Các lệnh chính xác phụ thuộc vào cấu trúc thư mục và cấu hình của dự án.
+```bash
+node -v
+npm -v
+git --version
+```
 
-1. Mở thư mục dự án trong VS Code.
-2. Cài đặt các gói phụ thuộc theo file `package.json` tương ứng.
-3. Cấu hình API key trong file môi trường theo hướng dẫn của dự án.
-4. Khởi chạy frontend và backend theo các script đã khai báo.
-5. Mở địa chỉ localhost được hiển thị trong terminal để sử dụng ứng dụng.
+---
 
-**Lưu ý:** Không đưa API key, mật khẩu hoặc thông tin bí mật vào README hay kho mã nguồn công khai.
+## 5. Hướng Dẫn Thiết Lập & Khởi Chạy Dự Án (Sau Khi Hoàn Tất Cài Đặt)
 
-## 7. Mục tiêu dự án
+### Bước 1: Clone mã nguồn về máy
 
-- Xây dựng ứng dụng web hỗ trợ học tập.
-- Áp dụng kiến trúc Client–Server.
-- Thực hành phát triển frontend và backend.
-- Tích hợp dịch vụ AI vào ứng dụng web.
-- Rèn luyện kỹ năng xây dựng, kiểm thử và quản lý mã nguồn.
+```bash
+git clone https://github.com/MaiTienDat1502/studymate-ai.git
+cd studymate-ai
+```
 
-## 8. Trạng thái dự án
+### Bước 2: Thiết lập Backend
 
-Dự án được phát triển trong khuôn khổ môn học Lập trình Web Nâng Cao. Các chức năng và hướng dẫn sử dụng sẽ được cập nhật theo tiến độ triển khai thực tế.
+```bash
+cd backend
+# 1. Cài đặt các thư viện cần thiết (khi đến Giai đoạn 2)
+npm install
+
+# 2. Tạo file biến môi trường từ mẫu
+cp .env.example .env
+# (Trên Windows PowerShell: Copy-Item .env.example .env)
+
+# 3. Mở file .env và điền:
+# - Tạo mã JWT_SECRET ngẫu nhiên bằng lệnh:
+#   node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+# - Điền GEMINI_API_KEY lấy từ Google AI Studio
+
+# 4. Khởi chạy server backend ở chế độ phát triển
+npm run dev
+# Server lắng nghe tại http://localhost:5000
+```
+
+### Bước 3: Thiết lập Frontend
+
+Mở một cửa sổ terminal mới:
+
+```bash
+cd frontend
+# 1. Cài đặt thư viện frontend
+npm install
+
+# 2. Khởi chạy giao diện React với Vite
+npm run dev
+# Mở trình duyệt tại http://localhost:5173
+```
+
+### Bước 4: Chạy kiểm thử tự động (Testing)
+
+Tại thư mục `backend/`:
+
+```bash
+npm test
+```
+
+---
+
+## 6. Tài Liệu Tham Khảo Dành Cho Thành Viên Nhóm
+
+- [Đặc tả API Contract](docs/api-specs.md)
+- [Quy chuẩn làm việc nhóm với Git & Pull Request](docs/git-workflow.md)
+- [Cơ sở dữ liệu SQLite Schema](docs/database-schema.sql)
