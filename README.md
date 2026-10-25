@@ -21,10 +21,10 @@
 
 | Thành viên | Phụ trách | Phạm vi công việc |
 | :--- | :--- | :--- |
-| **Person 1** | Chat AI & Hỏi đáp | Giao diện Chat, xử lý luồng gửi câu hỏi và nhận phản hồi |
-| **Person 2** | Tóm tắt bài học | Giao diện Upload/Nhập văn bản, cấu hình độ dài tóm tắt |
-| **Person 3** | Trắc nghiệm (Quiz) | Giao diện làm bài trắc nghiệm, tính điểm và chấm bài |
-| **Person 4** (Trưởng nhóm kỹ thuật) | Auth, Tích hợp, Test, Deploy, Docs | Xác thực JWT, cấu hình SQLite, middleware, kết nối Gemini backend, Jest/Supertest, tài liệu nhóm |
+| Phạm Duy Khánh | Giao diện và trải nghiệm người dùng | Phát triển Frontend React, xây dựng giao diện và tối ưu trải nghiệm người dùng. |
+| Nguyễn Trung Đức | Các chức năng AI | Phát triển Backend và tích hợp Gemini API cho các chức năng hỏi đáp, tóm tắt tài liệu và tạo câu hỏi trắc nghiệm. |
+| Đỗ Đăng Dương | Lịch sử học tập và kiểm thử | Xử lý lịch sử học tập, làm việc với Database và thực hiện kiểm thử hệ thống. |
+| Mai Tiến Đạt (Trưởng nhóm kỹ thuật) | Auth, Tích hợp, Test, Deploy, Docs | Xác thực JWT, cấu hình SQLite, xây dựng middleware, kết nối Gemini backend, kiểm thử bằng Jest/Supertest và xây dựng tài liệu nhóm. |
 
 ---
 
